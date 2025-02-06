@@ -1,0 +1,107 @@
+import random
+min_val = 1
+max_val = 6
+rollagain ="yes"
+p1=0
+p2=0
+while rollagain=='yes'or rollagain=='y':
+        print("Rolling the dices")
+        print("The values are:")
+        c=random.randint(min_val,max_val)
+        print(c)
+        p1=p1+c
+        if(p1>=1)and(p1<=100):
+            print("You are in here:%d"%p1)
+            if(p1==4):
+                p1=p1+10
+            elif(p1==9):
+                p1=p1+22
+                print("You're lucky you have a ladder")
+            elif(p1==17):
+                p1=p1-10
+                print("You are Bite By a snake")
+            elif(p1==20):
+                p1=p1+18
+                print("You're lucky you have a ladder")
+            elif(p1==28):
+                p1=p1+56
+                print("You're lucky you have a ladder")
+            elif(p1==21):
+                p1=p1+21
+                print("You're lucky you have a ladder")
+            elif(p1==51):
+                p1=p1+16
+                print("You're lucky you have a ladder")
+            elif(p1==54):
+                p1=p1-20
+                print("You are Bite By a snake")
+            elif(p1==64):
+                p1=p1-4
+                print("You are Bite By a snake")
+            elif(p1==71):
+                p1=p1+20
+                print("You're lucky you have a ladder")
+            elif(p1==87):
+                p1=p1-63
+                print("You are Bite By a snake")
+            elif(p1==93):
+                p1=p1-20
+                print("You are Bite By a snake")
+            elif(p1==95):
+                p1=p1-20
+                print("You are Bite By a snake")
+            elif(p1==98):
+                p1=p1-19
+                print("You are Bite By a snake")
+        c1=random.randint(min_val,max_val)
+        p2 = p2 + c1
+        print(c1)
+        if(p2>=1)and(p2<=100):
+            print("You are in here:%d"%p2)
+            if(p2==4):
+                p2=p2+10
+            elif(p2==9):
+                p2=p2+22
+                print("You're lucky you have a ladder")
+            elif(p2==17):
+                p2=p2-10
+                print("You are Bite By a snake")
+            elif(p2==20):
+                p2=p2+18
+                print("You're lucky you have a ladder")
+            elif(p2==28):
+                p2=p2+56
+                print("You're lucky you have a ladder")
+            elif(p2==21):
+                p2=p2+21
+                print("You're lucky you have a ladder")
+            elif(p2==51):
+                p2=p2+16
+                print("You're lucky you have a ladder")
+            elif(p2==54):
+                p2=p2-20
+                print("You are Bite By a snake")
+            elif(p2==64):
+                p2=p2-4
+                print("You are Bite By a snake")
+            elif(p2==71):
+                p2=p2+20
+                print("You're lucky you have a ladder")
+            elif(p2==87):
+                p2=p2-63
+                print("You are Bite By a snake")
+            elif(p2==93):
+                p2=p2-20
+                print("You are Bite By a snake")
+            elif(p2==95):
+                p2=p2-20
+                print("You are Bite By a snake")
+            elif(p2==98):
+                p2=p2-19
+                print("You are Bite By a snake")
+        if(p1>=100):
+            print("Player-1 You won!!!")
+        elif(p2>=100):
+            print("player-2 You won!!!")
+            break
+        rollagain=str(input("Roll the dices again?:"))
