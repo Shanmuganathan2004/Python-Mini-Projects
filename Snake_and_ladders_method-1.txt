@@ -1,0 +1,70 @@
+import random
+
+# Initialize player positions
+p1_position = 1
+p2_position = 1
+
+# Define the winning position
+winning_position = 100
+
+while True:
+    input("Press Enter to roll the dice...")
+
+    # Roll the dice for player 1
+    dice_p1 = random.randint(1, 6)
+    print(f"Player 1 rolled a {dice_p1}")
+    p1_position += dice_p1
+
+    # Check for snakes and ladders for player 1
+    if p1_position == 3:
+        p1_position = 22
+        print("Player 1 found a ladder! Climb to position 22.")
+    elif p1_position == 16:
+        p1_position = 6
+        print("Player 1 got bitten by a snake! Go back to position 6.")
+    elif p1_position == 32:
+        p1_position = 44
+        print("Player 1 found a ladder! Climb to position 44.")
+    elif p1_position == 47:
+        p1_position = 26
+        print("Player 1 got bitten by a snake! Go back to position 26.")
+    elif p1_position == 60:
+        p1_position = 42
+        print("Player 1 got bitten by a snake! Go back to position 42.")
+    elif p1_position == 74:
+        p1_position = 53
+        print("Player 1 got bitten by a snake! Go back to position 53.")
+    elif p1_position >= winning_position:
+        print("Player 1 wins!")
+        break
+
+    # Roll the dice for player 2
+    dice_p2 = random.randint(1, 6)
+    print(f"Player 2 rolled a {dice_p2}")
+    p2_position += dice_p2
+
+    # Check for snakes and ladders for player 2
+    if p2_position == 3:
+        p2_position = 22
+        print("Player 2 found a ladder! Climb to position 22.")
+    elif p2_position == 16:
+        p2_position = 6
+        print("Player 2 got bitten by a snake! Go back to position 6.")
+    elif p2_position == 32:
+        p2_position = 44
+        print("Player 2 found a ladder! Climb to position 44.")
+    elif p2_position == 47:
+        p2_position = 26
+        print("Player 2 got bitten by a snake! Go back to position 26.")
+    elif p2_position == 60:
+        p2_position = 42
+        print("Player 2 got bitten by a snake! Go back to position 42.")
+    elif p2_position == 74:
+        p2_position = 53
+        print("Player 2 got bitten by a snake! Go back to position 53.")
+    elif p2_position >= winning_position:
+        print("Player 2 wins!")
+        break
+
+    print(f"Player 1 is at position {p1_position}")
+    print(f"Player 2 is at position {p2_position}")
